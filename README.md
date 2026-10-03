@@ -290,7 +290,7 @@ flowchart LR
 | `DB_CONNECTION` | Database driver | `mysql` |
 | `DB_HOST` / `DB_PORT` | Database host and port | `127.0.0.1` / `3306` |
 | `DB_DATABASE` | Database name | `ecommerce` |
-| `DB_USERNAME` / `DB_PASSWORD` | Database credentials | `root` / `secret` |
+| `DB_USERNAME` / `DB_PASSWORD` | Database credentials | `your_db_user` / `your_db_password` |
 | `MAIL_MAILER` | `smtp` to send real emails, `log` for local development | `smtp` |
 | `MAIL_HOST` / `MAIL_PORT` | SMTP server | `smtp.gmail.com` / `587` |
 | `MAIL_USERNAME` / `MAIL_PASSWORD` | SMTP credentials | n/a |
@@ -309,14 +309,10 @@ flowchart LR
 | Admin panel | `http://127.0.0.1:8000/admin` |
 | Customer registration | `http://127.0.0.1:8000/register` (confirm the emailed OTP) |
 
-The database seeder creates a default administrator account:
-
-| Role | Email | Password |
-| ---- | ----- | -------- |
-| Admin | `admin@example.com` | `password` |
+Running `php artisan migrate --seed` creates an initial administrator account for local development. The account details are defined in `database/seeders/`; review them before first use.
 
 > [!WARNING]
-> These credentials are for local development only. Change the password before deploying to any shared or public environment.
+> Change the seeded administrator email and password immediately after your first login, and never run the seeder with its default credentials on a shared or public server.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -397,9 +393,10 @@ See the [Laravel deployment guide](https://laravel.com/docs/11.x/deployment) for
 - Customer registration and password reset are protected by email OTP verification.
 - Admin routes are guarded by dedicated authentication middleware.
 - Never commit your `.env` file or real credentials to version control.
+- Change the seeded administrator credentials before any shared or public deployment.
 - Run with `APP_DEBUG=false` and HTTPS in production.
 
-If you discover a security issue, please open a [GitHub Issue](https://github.com/Sabin78910/Ecommerce-Website/issues) without including sensitive details, and the maintainer will follow up.
+**Reporting a vulnerability.** Please do not report security issues in public GitHub Issues. Use GitHub's [private vulnerability reporting](https://github.com/Sabin78910/Ecommerce-Website/security/advisories/new) so the issue can be fixed before it is disclosed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
