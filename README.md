@@ -2,19 +2,19 @@
 
 <a id="readme-top"></a>
 
-# Ecommerce Website
+<img src="public/images/logo/logo.png" alt="N & S Handicrafts logo" width="140">
 
-**A modern, full-featured e-commerce platform built with Laravel.**
+# N & S Handicrafts – E-commerce Website
 
-Product discovery, cart, secure checkout, and a complete admin dashboard, all in one application.
+**A full-stack online store built with Laravel 11 — storefront, cart, estimate-based checkout and a complete admin panel.**
 
 [![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
-[![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com/)
+[![Laravel](https://img.shields.io/badge/Laravel-11-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com/)
 [![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](LICENSE)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-[Live Demo](#) · [Report a Bug](https://github.com/your-username/Ecommerce-Website/issues/new?labels=bug) · [Request a Feature](https://github.com/your-username/Ecommerce-Website/issues/new?labels=enhancement)
+[Report a Bug](https://github.com/Sabin78910/Ecommerce-Website/issues/new?labels=bug) · [Request a Feature](https://github.com/Sabin78910/Ecommerce-Website/issues/new?labels=enhancement)
 
 </div>
 
@@ -23,9 +23,10 @@ Product discovery, cart, secure checkout, and a complete admin dashboard, all in
 ## Table of Contents
 
 - [About the Project](#about-the-project)
-- [Key Features](#key-features)
-- [Tech Stack](#tech-stack)
 - [Screenshots](#screenshots)
+- [Key Features](#key-features)
+- [How Ordering Works](#how-ordering-works)
+- [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -36,199 +37,224 @@ Product discovery, cart, secure checkout, and a complete admin dashboard, all in
 - [Deployment](#deployment)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
-- [Security](#security)
 - [License](#license)
-- [Acknowledgements](#acknowledgements)
 - [Contact](#contact)
 
 ---
 
 ## About the Project
 
-**Ecommerce Website** is an online store application built on the [Laravel](https://laravel.com) framework. It covers the complete shopping journey, from browsing the catalogue to placing and tracking an order, and gives store administrators a single dashboard to manage products, inventory, customers, and sales.
+**N & S Handicrafts** is an e-commerce web application built with [Laravel](https://laravel.com). Customers can browse the catalogue, save items to a wishlist, apply coupons, and place orders through an estimate-based checkout. Administrators manage the whole store — products, categories, brands, coupons, home-page slides, orders, payments, shipping and customer queries — from a dedicated dashboard.
 
-The codebase follows Laravel conventions (MVC, Eloquent ORM, migrations, service container), which keeps it easy to read, extend, and deploy.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Key Features
-
-<!-- Edit this list so it matches exactly what your build implements. -->
-
-### Storefront
-- Product catalogue organised by categories
-- Search, filtering, and sorting
-- Product detail pages with images, pricing, and stock status
-- Fully responsive layout for mobile, tablet, and desktop
-
-### Cart & Checkout
-- Persistent shopping cart with quantity updates
-- Streamlined checkout with shipping and billing details
-- Order confirmation pages and email notifications
-- Configurable payment gateway integration
-
-### Customer Accounts
-- Registration, login, and password reset
-- Order history and order status tracking
-- Profile and address management
-
-### Admin Dashboard
-- Product, category, and inventory management
-- Order management with status workflow
-- Customer management
-- Sales overview at a glance
-
-### Platform
-- Role-based access control (admin / customer)
-- Queued jobs for emails and background tasks
-- Database migrations and seeders for reproducible setup
-- Automated test suite
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Tech Stack
-
-<!-- Adjust to your actual stack (e.g. add Tailwind CSS, Bootstrap, Livewire, Stripe). -->
-
-| Layer         | Technology                                   |
-| ------------- | -------------------------------------------- |
-| Backend       | Laravel, PHP 8.2+                            |
-| Database      | MySQL 8 / MariaDB (any Laravel-supported DB) |
-| Frontend      | Blade templates, JavaScript, CSS             |
-| Asset Bundler | Vite                                         |
-| Auth          | Laravel authentication                       |
-| Queue / Cache | Database or Redis (configurable)             |
-| Testing       | PHPUnit / Pest via `php artisan test`        |
-| Code Style    | Laravel Pint                                 |
+Prices are shown in Nepalese Rupees (Rs.) and the checkout supports Nepali addresses (province, district) and international phone numbers.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Screenshots
 
-<!-- Add images to docs/screenshots/ and update the paths below. -->
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/home.png" alt="Home page">
+      <br><sub><b>Home</b> · categories, hot deals and featured products</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/shop.png" alt="Shop page">
+      <br><sub><b>Shop</b> · category, brand and price filters with sorting</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/product.png" alt="Product details page">
+      <br><sub><b>Product details</b> · image gallery and add to cart</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/cart.png" alt="Shopping cart">
+      <br><sub><b>Cart</b> · quantities, coupons and VAT estimate</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/checkout.png" alt="Checkout page">
+      <br><sub><b>Checkout</b> · shipping details and estimate request</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="docs/screenshots/admin-dashboard.png" alt="Admin dashboard">
+      <br><sub><b>Admin dashboard</b> · sales stats and recent orders</sub>
+    </td>
+  </tr>
+</table>
 
-| Home Page | Product Page |
-| :-------: | :----------: |
-| ![Home](docs/screenshots/home.png) | ![Product](docs/screenshots/product.png) |
+<sub>Screenshots use the sample catalogue images included in <code>public/uploads</code>.</sub>
 
-| Cart & Checkout | Admin Dashboard |
-| :-------------: | :-------------: |
-| ![Checkout](docs/screenshots/checkout.png) | ![Admin](docs/screenshots/admin.png) |
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Key Features
+
+### Storefront
+- Home page with category carousel, **Hot Deals** and **Featured Products**
+- Shop page with category, brand and price-range filters, sorting and page-size options
+- Product pages with image gallery, lightbox and related products
+- Live product search
+- Wishlist with move-to-cart
+- About, FAQs, Terms, Refund & Cancellation and Contact pages
+
+### Cart & Checkout
+- Cart with quantity controls and remove / clear actions
+- Discount coupons (fixed or percentage, minimum cart value, expiry date)
+- Pre-estimated VAT shown before checkout
+- Shipping form with Nepali address fields and international phone input
+- Estimate-based ordering with proof-of-payment upload (see [How Ordering Works](#how-ordering-works))
+
+### Customer Accounts
+- Registration with **email OTP verification**
+- Password reset via OTP
+- Order history, order details and order cancellation
+- Address book with a default address
+- Account details and password management
+
+### Admin Panel
+- Dashboard with order counts, sales amounts and product statistics
+- Full management of products (main image + gallery, auto-resized), categories, brands, coupons and home-page slides
+- Order management with status updates and courier / tracking details
+- Payment verification for uploaded receipts
+- Customer list with order counts
+- Contact queries with email replies
+- Quick page search across the admin area
+
+### Email Notifications
+OTP codes, order confirmation, order estimate, payment received, payment verified, shipping details, and contact-query replies.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## How Ordering Works
+
+```text
+Customer                         Store admin
+────────                         ───────────
+Add to cart → Checkout
+Click "Request Estimate"   ───►  Calculates shipping charge + VAT
+                           ◄───  Final invoice emailed (1–3 business days)
+Upload proof of payment    ───►  Verifies the payment
+                           ◄───  Courier name + tracking ID emailed
+Order delivered
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Tech Stack
+
+| Layer          | Technology                                                                 |
+| -------------- | -------------------------------------------------------------------------- |
+| Backend        | Laravel 11, PHP 8.2+                                                       |
+| Database       | MySQL / MariaDB                                                            |
+| Frontend       | Blade, Bootstrap 5, jQuery, Swiper, noUiSlider, SweetAlert, intl-tel-input |
+| Auth           | Laravel UI with custom email-OTP verification                             |
+| Cart           | `surfsidemedia/shoppingcart`                                               |
+| Images         | Intervention Image (product images resized to 540 × 689)                   |
+| Email          | Laravel Mail (SMTP)                                                        |
+| Build tooling  | Vite, Sass, Tailwind CSS                                                   |
+| Testing / Lint | PHPUnit, Laravel Pint                                                      |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
 
-Follow these steps to get a local copy up and running.
-
 ### Prerequisites
 
-Make sure the following are installed on your machine:
-
-- **PHP 8.2+** with the extensions `bcmath`, `ctype`, `fileinfo`, `mbstring`, `openssl`, `pdo`, `tokenizer`, and `xml`
-- **Composer 2.x** – [getcomposer.org](https://getcomposer.org/)
-- **Node.js 20+** and **npm** – [nodejs.org](https://nodejs.org/)
+- **PHP 8.2+** with `bcmath`, `ctype`, `fileinfo`, `gd`, `mbstring`, `openssl`, `pdo_mysql`, `tokenizer` and `xml`
+- **Composer 2**
 - **MySQL 8+** or **MariaDB 10.6+**
+- **Node.js 20+** and **npm** (only needed if you change files in `resources/`)
 - **Git**
-
-> Check `composer.json` for the exact PHP and Laravel versions this project requires.
 
 ### Installation
 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/Ecommerce-Website.git
+   git clone https://github.com/Sabin78910/Ecommerce-Website.git
    cd Ecommerce-Website
    ```
 
-2. **Install PHP and JavaScript dependencies**
+2. **Install dependencies**
 
    ```bash
    composer install
    npm install
    ```
 
-3. **Create your environment file and generate the app key**
+3. **Create the environment file and app key**
 
    ```bash
    cp .env.example .env
    php artisan key:generate
    ```
 
-4. **Configure the database** in `.env` (see [Environment Configuration](#environment-configuration)), then create the database in MySQL.
+4. **Configure MySQL** — create an empty database, then update `.env` (see [Environment Configuration](#environment-configuration)). The migrations use MySQL syntax, so switch `DB_CONNECTION` from `sqlite` to `mysql`.
 
-5. **Run migrations and seed sample data**
+5. **Run migrations and seed the admin account**
 
    ```bash
    php artisan migrate --seed
    ```
 
-6. **Link the storage directory** (required for product images)
+6. **Link storage** (needed for payment receipts)
 
    ```bash
    php artisan storage:link
    ```
 
-7. **Start the development servers**
+7. **Start the app**
 
    ```bash
-   npm run dev
    php artisan serve
    ```
 
-   The application is now available at **http://localhost:8000**.
-
-> **Tip:** If your `composer.json` includes a `dev` script, `composer run dev` starts the web server, queue worker, and Vite together.
+   Open **http://127.0.0.1:8000**.
 
 ### Environment Configuration
 
-Key variables in `.env`:
+| Variable                 | Description                                   | Example                  |
+| ------------------------ | --------------------------------------------- | ------------------------ |
+| `APP_NAME`               | Store name in page titles and emails          | `"N & S Handicrafts"`    |
+| `APP_URL`                | Base URL of the application                   | `http://127.0.0.1:8000`  |
+| `DB_CONNECTION`          | Database driver                               | `mysql`                  |
+| `DB_HOST` / `DB_PORT`    | Database host and port                        | `127.0.0.1` / `3306`     |
+| `DB_DATABASE`            | Database name                                 | `ecommerce`              |
+| `DB_USERNAME` / `DB_PASSWORD` | Database credentials                     | `root` / `secret`        |
+| `MAIL_MAILER`            | `smtp` to send real emails, `log` for local   | `smtp`                   |
+| `MAIL_HOST` / `MAIL_PORT`| SMTP server                                   | `smtp.gmail.com` / `587` |
+| `MAIL_USERNAME` / `MAIL_PASSWORD` | SMTP credentials                     | —                        |
+| `MAIL_FROM_ADDRESS`      | Sender address for store emails               | `info@example.com`       |
 
-| Variable           | Description                          | Example                  |
-| ------------------ | ------------------------------------ | ------------------------ |
-| `APP_NAME`         | Store name shown across the site     | `"Ecommerce Website"`    |
-| `APP_URL`          | Base URL of the application          | `http://localhost:8000`  |
-| `DB_CONNECTION`    | Database driver                      | `mysql`                  |
-| `DB_HOST`          | Database host                        | `127.0.0.1`              |
-| `DB_PORT`          | Database port                        | `3306`                   |
-| `DB_DATABASE`      | Database name                        | `ecommerce`              |
-| `DB_USERNAME`      | Database user                        | `root`                   |
-| `DB_PASSWORD`      | Database password                    | `secret`                 |
-| `MAIL_MAILER`      | Mail driver for order emails         | `smtp`                   |
-| `QUEUE_CONNECTION` | Queue driver for background jobs     | `database`               |
-
-Payment gateway credentials are configured in `.env` and read from `config/services.php`.
+> **Tip:** With `MAIL_MAILER=log`, registration OTP codes are written to `storage/logs/laravel.log`, so you can test sign-up without an SMTP server.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
 
-After seeding, you can sign in with the default accounts:
+The seeder creates a default admin account:
 
-<!-- Update these to match your DatabaseSeeder, or remove this table if no users are seeded. -->
+| Role  | Email               | Password   |
+| ----- | ------------------- | ---------- |
+| Admin | `admin@example.com` | `password` |
 
-| Role     | Email                  | Password   |
-| -------- | ---------------------- | ---------- |
-| Admin    | `admin@example.com`    | `password` |
-| Customer | `customer@example.com` | `password` |
+> **Important:** Change this password before deploying.
 
-> **Important:** Change or remove these credentials before deploying to production.
-
-- **Storefront:** `http://localhost:8000`
-- **Admin dashboard:** `http://localhost:8000/admin`
+- **Storefront:** `http://127.0.0.1:8000`
+- **Admin panel:** `http://127.0.0.1:8000/admin`
+- **Customer account:** register at `/register` and confirm the emailed OTP
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Running Tests
 
-Run the full test suite:
-
 ```bash
 php artisan test
 ```
 
-Check and fix code style with Laravel Pint:
+Format code with Laravel Pint:
 
 ```bash
 ./vendor/bin/pint
@@ -242,35 +268,38 @@ Check and fix code style with Laravel Pint:
 Ecommerce-Website/
 ├── app/
 │   ├── Http/
-│   │   ├── Controllers/    # Storefront, cart, checkout, and admin controllers
-│   │   └── Middleware/     # Auth and role middleware
-│   ├── Models/             # Eloquent models (Product, Category, Order, User, ...)
-│   └── Providers/          # Service providers
-├── config/                 # Application configuration
+│   │   ├── Controllers/
+│   │   │   ├── Admin/              # Payment verification, shipping, contact queries
+│   │   │   ├── Auth/               # Login, registration, OTP, password reset
+│   │   │   ├── ControllerAdmin.php # Admin dashboard and catalogue management
+│   │   │   ├── ControllerCart.php  # Cart, coupons, checkout, payments
+│   │   │   ├── ControllerShop.php  # Shop listing and product details
+│   │   │   ├── ControllerUser.php  # Customer account area
+│   │   │   └── ControllerWishlist.php
+│   │   └── Middleware/             # Admin authentication
+│   ├── Mail/                       # Order, payment, shipping and query emails
+│   └── Models/                     # Product, Category, Brand, Order, Coupon, ...
 ├── database/
-│   ├── factories/          # Model factories for testing and seeding
-│   ├── migrations/         # Database schema
-│   └── seeders/            # Sample data
-├── public/                 # Web root and compiled assets
-├── resources/
-│   ├── css/                # Stylesheets
-│   ├── js/                 # JavaScript
-│   └── views/              # Blade templates
-├── routes/
-│   └── web.php             # Web routes
-├── storage/                # Logs, cache, and uploaded files
-└── tests/                  # Feature and unit tests
+│   ├── migrations/
+│   └── seeders/                    # Default admin user
+├── docs/screenshots/               # README images
+├── public/
+│   ├── assets/                     # Theme CSS, JS and images
+│   └── uploads/                    # Product, category, brand and slide images
+├── resources/views/
+│   ├── admin/                      # Admin panel pages
+│   ├── user/                       # Customer account pages
+│   ├── emails/                     # Email templates
+│   └── layouts/
+└── routes/web.php
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Deployment
 
-On your production server:
-
 ```bash
 composer install --no-dev --optimize-autoloader
-npm ci && npm run build
 php artisan migrate --force
 php artisan storage:link
 php artisan optimize
@@ -279,74 +308,51 @@ php artisan optimize
 Production checklist:
 
 - Set `APP_ENV=production` and `APP_DEBUG=false`
-- Point the web server document root to the `public/` directory
-- Run a queue worker under a process manager such as Supervisor (`php artisan queue:work`)
-- Add the scheduler cron entry: `* * * * * cd /path/to/project && php artisan schedule:run >> /dev/null 2>&1`
+- Point the web server's document root to `public/`
+- Make `storage/`, `bootstrap/cache/` and `public/uploads/` writable by the web server
+- Configure real SMTP credentials so customers receive OTP and order emails
 - Serve the site over HTTPS
 
-See the [Laravel deployment guide](https://laravel.com/docs/deployment) for more detail.
+See the [Laravel deployment guide](https://laravel.com/docs/11.x/deployment) for details.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Roadmap
 
-<!-- Tick items as you ship them, and add your own. -->
-
-- [ ] Wishlist
+- [x] Wishlist
+- [x] Discount coupons
+- [x] Email OTP verification
+- [x] Payment verification and shipment tracking
+- [ ] Online payment gateway at checkout (PayPal SDK is already installed)
 - [ ] Product reviews and ratings
-- [ ] Discount codes and coupons
-- [ ] Multi-currency support
-- [ ] REST API for mobile clients
-- [ ] Sales analytics and reports
+- [ ] Sales reports and charts
 
-See the [open issues](https://github.com/your-username/Ecommerce-Website/issues) for the full list of proposed features and known issues.
+See the [open issues](https://github.com/Sabin78910/Ecommerce-Website/issues) for proposed features and known issues.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contributing
 
-Contributions are welcome and appreciated.
-
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
+2. Create a branch: `git checkout -b feature/amazing-feature`
 3. Commit your changes: `git commit -m "feat: add amazing feature"`
-4. Push to the branch: `git push origin feature/amazing-feature`
+4. Push the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
-Before opening a PR, please make sure `php artisan test` passes and the code is formatted with `./vendor/bin/pint`.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Security
-
-If you discover a security vulnerability in this project, please **do not open a public issue**. Email **your-email@example.com** instead, and it will be addressed promptly.
-
-Vulnerabilities in the Laravel framework itself should be reported through [Laravel's security policy](https://github.com/laravel/framework/security/policy).
+Please run `php artisan test` and `./vendor/bin/pint` before opening a PR.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
 
-Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Acknowledgements
-
-- [Laravel](https://laravel.com) – the PHP framework powering this project
-- [Laravel Documentation](https://laravel.com/docs)
-- [Shields.io](https://shields.io) – README badges
+Released under the [MIT License](https://opensource.org/licenses/MIT).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contact
 
-**Your Name**
+Maintained by [@Sabin78910](https://github.com/Sabin78910) — questions and suggestions are welcome via [GitHub Issues](https://github.com/Sabin78910/Ecommerce-Website/issues).
 
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
-- Email: your-email@example.com
-
-Project link: [https://github.com/your-username/Ecommerce-Website](https://github.com/your-username/Ecommerce-Website)
+Project link: [github.com/Sabin78910/Ecommerce-Website](https://github.com/Sabin78910/Ecommerce-Website)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
